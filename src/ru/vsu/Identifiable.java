@@ -1,4 +1,5 @@
 package ru.vsu;
 
-public interface Identifiable  {
+public interface Identifiable  { // идентифицируемый
+    Integer getId();
 }

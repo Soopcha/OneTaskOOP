@@ -1,6 +1,33 @@
+import ru.vsu.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        PetViewModel pets = new PetViewModel();
+
+        PetInformation catInfo = new PetInformation();
+        Owner ownerOleg = new Owner("Олег");
+        //Animal cat = new Animal("Кот","Милый",true); не нужно
+
+        Pet pet = new Pet(123,1,"Пенёк","кот","пушистый",true,ownerOleg,catInfo);
+        System.out.println(pet.print());
+
+        System.out.println(pet.getAge());
+        System.out.println(pet.getBreed());
+
+        Owner ownerElena = new Owner("Lena");
+        catInfo.setTraits("длинный");
+        Vaccine vaccine = new Vaccine("Для приколов","Вакциночка");
+        catInfo.setVaccine(vaccine);
+        Pet pet2 = new Pet(1,20,"Олег","человек","милый",true, ownerElena, catInfo);
+        System.out.println(pet2.print());
+
+
+
+        PetViewModel petViewModel = new PetViewModel();
+        petViewModel.addOnePets(pet);
+        petViewModel.addOnePets(pet2);
+        String petInfo = petViewModel.print();  //те выводит сразу два челика
+        System.out.println(petInfo);
     }
 }
 /*  ооп пара
