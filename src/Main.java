@@ -5,10 +5,10 @@ public class Main {
         PetViewModel pets = new PetViewModel();
 
         PetInformation catInfo = new PetInformation();
-        Owner ownerOleg = new Owner("Олег");
+        Owner ownerS = new Owner("Совьентий");
         //Animal cat = new Animal("Кот","Милый",true); не нужно
 
-        Pet pet = new Pet(123,1,"Пенёк","кот","пушистый",true,ownerOleg,catInfo);
+        Pet pet = new Pet(123,1,"Пенёк","кот","пушистый",true,ownerS,catInfo);
         System.out.println(pet.print());
 
         System.out.println(pet.getAge());
